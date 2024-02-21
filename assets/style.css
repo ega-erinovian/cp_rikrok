@@ -1,0 +1,94 @@
+/* header */
+.header-section{
+    background-color: aliceblue;
+}
+.logo{
+    padding: 1rem 0rem 1rem 0rem;
+    display: grid;
+    place-items: center;
+}
+.logo img{
+    height: 5rem;
+}
+.navbar{
+    display: flex;
+    font-family: 'Poppins', sans-serif; /* Mengatur jenis font menjadi Poppins */
+    font-weight: bold; /* Mengatur ketebalan font menjadi bold */
+    background-color: #5E504A;
+    text-align: center;
+}
+.navbar-brand,
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+@media (min-width: 992px) {
+    .navbar-nav {
+        margin: 0 auto;
+        display: flex !important;
+        flex-direction: row !important;
+    }
+}
+.navbar-nav .nav-link {
+    text-align: center;
+    color: white !important; /* Mengatur warna teks untuk brand dan link menjadi putih */
+}
+.header-carousel{
+    display: flex;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 50rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-carousel h1{
+    color: aliceblue;
+    font-family: 'Bell MT', serif;
+    font-weight: bold; /* Mengatur ketebalan font menjadi bold */
+    text-align: center;
+    font-size: 128px;
+}
+.header-carousel span{
+    color: #8EA170;
+}
+.header-carousel img{
+    width: 100%;
+    max-height: 10%;
+}
+
+
+/* footer  */
+.footer {
+    background-color: #5E504A;
+    padding: 2rem 0rem 2rem 0rem;
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif; /* Mengatur jenis font menjadi Poppins */
+    font-size: 0.8rem;
+    align-items: center;
+    justify-content: center;
+}
+.footer h2{
+    font-size: 2rem;
+    font-family: 'Bell MT', serif;
+    font-weight: bold; /* Mengatur ketebalan font menjadi bold */
+}
+.footer img{
+    height: 5rem;
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+}
+.logofooter{
+    align-items: center;
+    justify-content: center;
+}
+.kiri{
+    /* display: flex; */
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+}
