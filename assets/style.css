@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --primary-color: #5e504a;
   --secondary-color: #8ea170;
@@ -48,6 +54,9 @@ span {
 .italic {
   font-style: italic;
 }
+ul {
+  list-style: none;
+}
 
 /* HEADER */
 .header-section {
@@ -57,7 +66,7 @@ span {
 /* LOGO */
 
 .logo {
-  padding: 1rem 0rem 1rem 0rem;
+  padding: 1rem 0rem;
   display: none;
   place-items: center;
 }
@@ -67,9 +76,6 @@ span {
 }
 
 /* NAVBAR */
-nav {
-  padding: 0 !important;
-}
 
 .navbar {
   display: flex;
@@ -84,7 +90,7 @@ nav {
   height: 4rem;
 }
 .nav-item {
-  margin: 0 3vw 0 3vw;
+  margin: 0 3vw;
 }
 .navbar-brand,
 .navbar-nav {
@@ -92,7 +98,6 @@ nav {
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  padding: 2vh 0 2vh 0;
 }
 
 @media (min-width: 992px) {
@@ -113,7 +118,7 @@ nav {
 
 .navbar-nav .nav-link:hover {
   color: var(--secondary-color) !important;
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 @media (max-width: 992px) {
@@ -219,10 +224,21 @@ nav {
   display: flex;
   align-items: center;
 }
-.kiri {
+
+.footer .kiri {
   /* display: flex; */
   text-align: start;
 }
+
+.footer .kiri a {
+  margin-bottom: 6px;
+  transition: all ease-in-out 0.15s;
+}
+
+.footer .kiri a:hover {
+  font-weight: bolder;
+}
+
 .copyright p,
 .credits p,
 .copyright span {
@@ -244,12 +260,36 @@ nav {
   display: flex;
   justify-content: center; /* Mengatur posisi horizontal menjadi tengah */
   align-items: center;
-  /* margin-bottom: -3rem;  */
 }
-@media (max-width: 720px) {
+
+@media (max-width: 992px) {
+  .footer {
+    padding: 2rem;
+  }
+
+  .footer img {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 3rem;
+  }
+
+  .footer .kiri {
+    margin-bottom: 1rem;
+  }
+
+  .copyright {
+    position: static;
+  }
+
+  .credits {
+    position: static;
+  }
+}
+
+/* @media (max-width: 720px) {
   .copyright p,
   .credits p,
   .copyright span {
     font-size: 0.5rem !important;
   }
-}
+} */
