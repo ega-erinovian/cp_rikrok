@@ -6,6 +6,8 @@
 
 body {
   background-color: var(--white);
+  overflow-x: hidden;
+  min-width: 100vw;
 }
 
 /* font  */
@@ -46,26 +48,40 @@ span {
 .italic {
   font-style: italic;
 }
-/* header */
+
+/* HEADER */
 .header-section {
   background-color: var(--white);
 }
 
+/* LOGO */
+
 .logo {
   padding: 1rem 0rem 1rem 0rem;
-  display: grid;
+  display: none;
   place-items: center;
 }
+
 .logo img {
   height: 5rem;
 }
+
+/* NAVBAR */
+nav {
+  padding: 0 !important;
+}
+
 .navbar {
   display: flex;
   font-family: "Poppins", sans-serif; /* Mengatur jenis font menjadi Poppins */
   font-weight: bold;
   background-color: var(--primary-color);
   text-align: center;
-  padding: 20vh 0 200vh 0vh;
+  z-index: 999;
+}
+
+.navbar img {
+  height: 4rem;
 }
 .nav-item {
   margin: 0 3vw 0 3vw;
@@ -78,6 +94,7 @@ span {
   font-size: 1.2rem;
   padding: 2vh 0 2vh 0;
 }
+
 @media (min-width: 992px) {
   .navbar-nav {
     margin: 0 auto;
@@ -85,11 +102,27 @@ span {
     flex-direction: row !important;
   }
 }
+
 .navbar-nav .nav-link {
   text-align: center;
-  color: white !important; /* Mengatur warna teks untuk brand dan link menjadi putih */
+  color: var(
+    --white
+  ) !important; /* Mengatur warna teks untuk brand dan link menjadi putih */
+  transition: all ease-in-out 0.15s;
 }
 
+.navbar-nav .nav-link:hover {
+  color: var(--secondary-color) !important;
+  transform: scale(1.15);
+}
+
+@media (max-width: 992px) {
+  .navbar .nav-item:nth-child(3) {
+    display: none;
+  }
+}
+
+/* HEADER CONTENT */
 .header-carousel {
   display: flex;
   background-size: cover;
@@ -109,13 +142,25 @@ span {
   background-image: linear-gradient(180deg, #00000069, #000000b6);
 }
 
+.header-carousel .header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
+
+.header-carousel .header-wrapper img {
+  height: 6rem;
+  width: fit-content;
+  display: none;
+}
+
 .header-carousel h1 {
   color: var(--white);
   font-family: "Bell MT", serif;
   font-weight: bold; /* Mengatur ketebalan font menjadi bold */
   text-align: center;
   font-size: 128px;
-  z-index: 100;
 }
 
 .header-carousel span {
@@ -127,7 +172,13 @@ span {
   max-height: 10%;
 }
 
-/* maps  */
+@media (max-width: 992px) {
+  .header-carousel .header-wrapper img {
+    display: block;
+  }
+}
+
+/* MAPS  */
 .maps {
   margin: 20vh 0 20vh 0;
 }
@@ -140,7 +191,7 @@ span {
   color: var(--secondary-color);
 }
 
-/* footer  */
+/* FOOTER  */
 .footer {
   background-color: var(--primary-color);
   padding: 10vh 0rem 3vh 0rem;
