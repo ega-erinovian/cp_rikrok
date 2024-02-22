@@ -1,157 +1,187 @@
-/* font  */
-.belltm-bold{
-    /* color: aliceblue; */
-    font-family: 'Bell MT', serif;
-    font-weight: bold; /* Mengatur ketebalan font menjadi bold */
-    text-align: center;
-    /* font-size: 96px; */
-}
-.belltm{
-    /* color: aliceblue; */
-    font-family: 'Bell MT', serif;
-    text-align: center;
-    /* font-size: 96px; */
-}
-span{
-    color: #8EA170;
-}
-.poppins-bold{
-    font-family: 'Poppins', sans-serif; /* Mengatur jenis font menjadi Poppins */
-    font-weight: 500; /* Mengatur ketebalan font menjadi bold */
-    text-align: center;
-}
-.poppins{
-    font-family: 'Poppins', sans-serif; /* Mengatur jenis font menjadi Poppins */
-    text-align: center;
-}
-.px96{
-    font-size: 96px;
-}
-.px128{
-    font-size: 128px;
-}
-.px24{
-    font-size: 24px;
-}
-.italic {
-    font-style: italic;
-}
-/* header */
-.header-section{
-    background-color: aliceblue;
+:root {
+  --primary-color: #5e504a;
+  --secondary-color: #8ea170;
+  --white: #f5f6fb;
 }
 
-.logo{
-    padding: 1rem 0rem 1rem 0rem;
-    display: grid;
-    place-items: center;
+body {
+  background-color: var(--white);
 }
-.logo img{
-    height: 5rem;
+
+/* font  */
+.belltm-bold {
+  /* color: var(--white); */
+  font-family: "Bell MT", serif;
+  font-weight: bold; /* Mengatur ketebalan font menjadi bold */
+  text-align: center;
+  /* font-size: 96px; */
 }
-.navbar{
-    display: flex;
-    font-family: 'Poppins', sans-serif; /* Mengatur jenis font menjadi Poppins */
-    font-weight: bold;
-    background-color: #5E504A;
-    text-align: center;
-    padding: 20vh 0 200vh 0vh;
+.belltm {
+  /* color: var(--white); */
+  font-family: "Bell MT", serif;
+  text-align: center;
+  /* font-size: 96px; */
 }
-.nav-item{
-    margin: 0 3vw 0 3vw;
+span {
+  color: var(--primary-color);
+}
+.poppins-bold {
+  font-family: "Poppins", sans-serif; /* Mengatur jenis font menjadi Poppins */
+  font-weight: 500; /* Mengatur ketebalan font menjadi bold */
+  text-align: center;
+}
+.poppins {
+  font-family: "Poppins", sans-serif; /* Mengatur jenis font menjadi Poppins */
+  text-align: center;
+}
+.px96 {
+  font-size: 96px;
+}
+.px128 {
+  font-size: 128px;
+}
+.px24 {
+  font-size: 24px;
+}
+.italic {
+  font-style: italic;
+}
+/* header */
+.header-section {
+  background-color: var(--white);
+}
+
+.logo {
+  padding: 1rem 0rem 1rem 0rem;
+  display: grid;
+  place-items: center;
+}
+.logo img {
+  height: 5rem;
+}
+.navbar {
+  display: flex;
+  font-family: "Poppins", sans-serif; /* Mengatur jenis font menjadi Poppins */
+  font-weight: bold;
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 20vh 0 200vh 0vh;
+}
+.nav-item {
+  margin: 0 3vw 0 3vw;
 }
 .navbar-brand,
 .navbar-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    padding: 2vh 0 2vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 2vh 0 2vh 0;
 }
 @media (min-width: 992px) {
-    .navbar-nav {
-        margin: 0 auto;
-        display: flex !important;
-        flex-direction: row !important;
-    }
+  .navbar-nav {
+    margin: 0 auto;
+    display: flex !important;
+    flex-direction: row !important;
+  }
 }
 .navbar-nav .nav-link {
-    text-align: center;
-    color: white !important; /* Mengatur warna teks untuk brand dan link menjadi putih */
-}
-.header-carousel{
-    display: flex;
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 623px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+  text-align: center;
+  color: white !important; /* Mengatur warna teks untuk brand dan link menjadi putih */
 }
 
-.header-carousel h1{
-    color: aliceblue;
-    font-family: 'Bell MT', serif;
-    font-weight: bold; /* Mengatur ketebalan font menjadi bold */
-    text-align: center;
-    font-size: 128px;
+.header-carousel {
+  display: flex;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
-.header-carousel span{
-    color: #8EA170;
+
+.header-carousel::after {
+  content: "";
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  background-image: linear-gradient(180deg, #00000069, #000000b6);
 }
-.header-carousel img{
-    width: 100%;
-    max-height: 10%;
+
+.header-carousel h1 {
+  color: var(--white);
+  font-family: "Bell MT", serif;
+  font-weight: bold; /* Mengatur ketebalan font menjadi bold */
+  text-align: center;
+  font-size: 128px;
+  z-index: 100;
+}
+
+.header-carousel span {
+  color: var(--secondary-color);
+}
+
+.header-carousel img {
+  width: 100%;
+  max-height: 10%;
 }
 
 /* maps  */
-.maps{
-    margin: 20vh 0 20vh 0;
+.maps {
+  margin: 20vh 0 20vh 0;
 }
 
+.maps h1 {
+  color: var(--primary-color);
+}
+
+.maps h1 span {
+  color: var(--secondary-color);
+}
 
 /* footer  */
 .footer {
-    background-color: #5E504A;
-    padding: 10vh 0rem 3vh 0rem;
-    /* margin: 10vh 0 10vh 0; */
-    color: aliceblue;
-    font-family: 'Poppins', sans-serif; /* Mengatur jenis font menjadi Poppins */
-    font-size: 0.8rem;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--primary-color);
+  padding: 10vh 0rem 3vh 0rem;
+  /* margin: 10vh 0 10vh 0; */
+  color: var(--white);
+  font-family: "Poppins", sans-serif; /* Mengatur jenis font menjadi Poppins */
+  font-size: 0.8rem;
+  align-items: center;
+  justify-content: center;
 }
-.footer h2{
-    font-size: 2rem;
-    font-family: 'Bell MT', serif;
-    font-weight: bold; /* Mengatur ketebalan font menjadi bold */
+.footer h2 {
+  font-size: 2rem;
+  font-family: "Bell MT", serif;
+  font-weight: bold; /* Mengatur ketebalan font menjadi bold */
 }
-.footer img{
-    height: 5rem;
-    text-align: start;
-    align-items: center;
-    justify-content: center;
+.footer img {
+  height: 5rem;
+  text-align: start;
+  align-items: center;
+  justify-content: center;
 }
-.logofooter{
-    align-items: center;
-    justify-content: center;
+.logofooter {
+  align-items: center;
+  justify-content: center;
 }
-.kiri{
-    /* display: flex; */
-    text-align: start;
-    align-items: center;
-    justify-content: center;
+.kiri {
+  /* display: flex; */
+  text-align: start;
+  align-items: center;
+  justify-content: center;
 }
 .copyright p,
 .credits p,
-.copyright span{
-  font-size: 0.8rem!important;
+.copyright span {
+  font-size: 0.8rem !important;
 }
 .copyright {
   padding-top: 2rem;
   display: flex;
   justify-content: center; /* Mengatur posisi horizontal menjadi tengah */
-  align-items: center; 
+  align-items: center;
   margin-bottom: -1rem;
 }
 
@@ -161,10 +191,10 @@ span{
   align-items: center;
   /* margin-bottom: -3rem;  */
 }
-@media (max-width:720px){
+@media (max-width: 720px) {
   .copyright p,
   .credits p,
-  .copyright span{
-    font-size: 0.5rem!important;
-}
+  .copyright span {
+    font-size: 0.5rem !important;
+  }
 }
