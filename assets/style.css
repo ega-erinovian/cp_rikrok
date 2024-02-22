@@ -1,7 +1,46 @@
+/* font  */
+.belltm-bold{
+    /* color: aliceblue; */
+    font-family: 'Bell MT', serif;
+    font-weight: bold; /* Mengatur ketebalan font menjadi bold */
+    text-align: center;
+    /* font-size: 96px; */
+}
+.belltm{
+    /* color: aliceblue; */
+    font-family: 'Bell MT', serif;
+    text-align: center;
+    /* font-size: 96px; */
+}
+span{
+    color: #8EA170;
+}
+.poppins-bold{
+    font-family: 'Poppins', sans-serif; /* Mengatur jenis font menjadi Poppins */
+    font-weight: 500; /* Mengatur ketebalan font menjadi bold */
+    text-align: center;
+}
+.poppins{
+    font-family: 'Poppins', sans-serif; /* Mengatur jenis font menjadi Poppins */
+    text-align: center;
+}
+.px96{
+    font-size: 96px;
+}
+.px128{
+    font-size: 128px;
+}
+.px24{
+    font-size: 24px;
+}
+.italic {
+    font-style: italic;
+}
 /* header */
 .header-section{
     background-color: aliceblue;
 }
+
 .logo{
     padding: 1rem 0rem 1rem 0rem;
     display: grid;
@@ -13,9 +52,13 @@
 .navbar{
     display: flex;
     font-family: 'Poppins', sans-serif; /* Mengatur jenis font menjadi Poppins */
-    font-weight: bold; /* Mengatur ketebalan font menjadi bold */
+    font-weight: bold;
     background-color: #5E504A;
     text-align: center;
+    padding: 20vh 0 200vh 0vh;
+}
+.nav-item{
+    margin: 0 3vw 0 3vw;
 }
 .navbar-brand,
 .navbar-nav {
@@ -23,6 +66,7 @@
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+    padding: 2vh 0 2vh 0;
 }
 @media (min-width: 992px) {
     .navbar-nav {
@@ -39,7 +83,7 @@
     display: flex;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.5);
-    height: 50rem;
+    height: 623px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -60,11 +104,17 @@
     max-height: 10%;
 }
 
+/* maps  */
+.maps{
+    margin: 20vh 0 20vh 0;
+}
+
 
 /* footer  */
 .footer {
     background-color: #5E504A;
-    padding: 2rem 0rem 2rem 0rem;
+    padding: 10vh 0rem 3vh 0rem;
+    /* margin: 10vh 0 10vh 0; */
     color: aliceblue;
     font-family: 'Poppins', sans-serif; /* Mengatur jenis font menjadi Poppins */
     font-size: 0.8rem;
@@ -91,4 +141,30 @@
     text-align: start;
     align-items: center;
     justify-content: center;
+}
+.copyright p,
+.credits p,
+.copyright span{
+  font-size: 0.8rem!important;
+}
+.copyright {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center; /* Mengatur posisi horizontal menjadi tengah */
+  align-items: center; 
+  margin-bottom: -1rem;
+}
+
+.credits {
+  display: flex;
+  justify-content: center; /* Mengatur posisi horizontal menjadi tengah */
+  align-items: center;
+  /* margin-bottom: -3rem;  */
+}
+@media (max-width:720px){
+  .copyright p,
+  .credits p,
+  .copyright span{
+    font-size: 0.5rem!important;
+}
 }
